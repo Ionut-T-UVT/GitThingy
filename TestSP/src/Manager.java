@@ -6,4 +6,7 @@ public class Manager implements Angajat {
         this.name = name;
         this.salar = salar;
     }
+    public int getSalar() {
+        return salar;
+    }
 }

@@ -6,5 +6,7 @@ public class Main {
         d.add(new Programator("Dorel Senior", 5001));
         d.add(new Programator("Dorel Junior", 5002));
         a.add(d);
+        Visitor calculSalar = new VisitorSalar();
+        calculSalar.print();
     }
 }
