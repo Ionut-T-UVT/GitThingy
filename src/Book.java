@@ -51,7 +51,7 @@ public class Book {
     }
 
     public void createNewImage(String newImage){
-        Images.add(newImage);
+        Images.add(newImage); // change
     }
 
     public void createNewTable(String newTable){
