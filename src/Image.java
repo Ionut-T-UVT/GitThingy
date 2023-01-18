@@ -1,6 +1,6 @@
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element{
+public class Image implements Element, Visitee{
     private String url;
 
     Image(String url) {
@@ -28,5 +28,10 @@ public class Image implements Element{
     @Override
     public Element get(int i) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
     }
 }

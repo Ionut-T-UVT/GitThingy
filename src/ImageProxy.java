@@ -1,4 +1,4 @@
-public class ImageProxy implements Element{
+public class ImageProxy implements Element, Visitee{
     Image realImage;
     String url;
 
@@ -31,5 +31,10 @@ public class ImageProxy implements Element{
     @Override
     public Element get(int i) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImageProxy(this);
     }
 }

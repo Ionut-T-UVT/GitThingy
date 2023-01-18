@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element{
+public class Section implements Element, Visitee{
 
     private String title;
     private List<Element> elements;
@@ -32,6 +32,14 @@ public class Section implements Element{
     @Override
     public Element get(int i) {
         return elements.get(i);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        for(Element e: elements) {
+            e.accept(visitor);
+        }
+        visitor.visitSection(this);
     }
 
 

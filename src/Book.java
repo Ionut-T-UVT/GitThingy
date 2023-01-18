@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Book implements Visitee{
     private String name;
     private List<Element> elements;
     private List<Author> authors;
@@ -33,4 +33,13 @@ public class Book {
         }
 
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        for(Element e: elements) {
+            e.accept(visitor);
+        }
+        visitor.visitBook(this);
+    }
+
 }
