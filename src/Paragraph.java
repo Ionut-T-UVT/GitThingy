@@ -24,4 +24,8 @@ public class Paragraph implements Element {
     public Element get(int i) {
         return null;
     }
+
+    public String getText() {
+        return text;
+    }
 }
