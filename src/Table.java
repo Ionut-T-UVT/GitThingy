@@ -1,12 +1,27 @@
-public class Table implements Element {
-    private String title;
+public class Table implements Element{
+    private String name;
 
-    public Table(String title){
-        this.title = title;
+    public Table(String name){
+        this.name = name;
     }
 
-    public void print(){
-        System.out.println("Table with Title:"+ title);
-                }
+    @Override
+    public void print() {
+        System.out.println("Table "+ name);
+    }
 
+    @Override
+    public void add(Element element) {
+
+    }
+
+    @Override
+    public void remove(Element element) {
+
+    }
+
+    @Override
+    public Element get(int i) {
+        return null;
+    }
 }

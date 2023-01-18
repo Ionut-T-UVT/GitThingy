@@ -1,11 +1,13 @@
-public class Image implements Element{
-    private String url;
+public class TableOfContents implements Element{
+    private String name;
 
-    public Image(String url){
-    this.url = url;
+    public void TableOfContents(String name){
+        this.name = name;
     }
+
+    @Override
     public void print() {
-        System.out.println("Image with name:" + url);
+
     }
 
     @Override
